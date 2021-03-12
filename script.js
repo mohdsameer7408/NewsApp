@@ -33,7 +33,9 @@ btnTimes.addEventListener("click", function () {
 
 const fetchNews = async () => {
   try {
-    const response = await fetch("http://localhost:80/api/news");
+    const response = await fetch(
+      "https://techno-news-api.herokuapp.com/api/news"
+    );
     const data = await response.json();
     for (let i = 0; i < 16; i++) {
       if (i < 4) {
